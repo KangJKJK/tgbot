@@ -17,7 +17,7 @@ echo -e "${GREEN}출처: https://github.com/thebrumby/HotWalletBot.git${NC}""
 
 echo -e "${GREEN}설치 옵션을 선택하세요:${NC}"
 echo -e "${YELLOW}1. 통합 봇 새로 설치${NC}"
-echo -e "${YELLOW}2. 기존정보 그대로 이용하기(재실행)${NC}"
+echo -e "${YELLOW}2. 재실행하기${NC}"
 read -p "선택: " choice
 
 case $choice in
