@@ -67,6 +67,14 @@ case $choice in
   2)
     echo -e "${GREEN}통합 봇을 재실행합니다.${NC}" 
     cd "$WORK"
+    # Node.js LTS 버전 설치 및 사용
+    echo -e "${YELLOW}Node.js LTS 버전을 설치하고 설정 중...${NC}"
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # nvm을 로드합니다
+    nvm install --lts
+    nvm use --lts
+    npm install -g pm2
+    pm2 startup systemd
     ./launch.sh
     ;;
 
