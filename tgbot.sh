@@ -13,7 +13,7 @@ NC='\033[0m' # 색상 초기화
 
 echo -e "${GREEN}각종 봇을 설치합니다.${NC}"
 echo -e "${GREEN}스크립트작성자: https://t.me/kjkresearch${NC}"
-echo -e "${GREEN}출처: https://github.com/thebrumby/HotWalletBot.git${NC}""
+echo -e "${GREEN}출처: https://github.com/thebrumby/HotWalletBot.git${NC}"
 
 echo -e "${GREEN}설치 옵션을 선택하세요:${NC}"
 echo -e "${YELLOW}1. 통합 봇 새로 설치${NC}"
@@ -53,12 +53,6 @@ case $choice in
     echo -e "${YELLOW}시스템 업데이트 및 필수 패키지 설치 중...${NC}"
     sudo apt update
     sudo apt install -y python3 python3-pip git
-
-    echo -e "${YELLOW}Web텔레그렘에 접속후 F12를 누르시고 게임을 실행하세요${NC}"
-    read -p "애플리케이션-세션저장소-Birds와 관련된 URL클릭 후 나오는 UserID나 QueryID를 적어두세요 (엔터) : "
-    echo -e "${GREEN}다계정의 query_id를 입력할 경우 줄바꿈으로 구분하세요.${NC}"
-    echo -e "${GREEN}입력을 마치려면 엔터를 두 번 누르세요.${NC}"
-    echo -e "${YELLOW}Userid를 입력하세요(user= 또는 query_id= 포함해서 입력):${NC}"
     
     # 봇 구동
     ./install.sh
@@ -68,7 +62,6 @@ case $choice in
 
     # launch.sh 실행
     ./launch.sh
-
     ;;
     
   2)
